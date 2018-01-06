@@ -6,3 +6,6 @@ out
 
 /.idea
 *.iml
+
+.lein-failures
+doo-index.html

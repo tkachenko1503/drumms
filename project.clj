@@ -16,7 +16,9 @@
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"
                                     "test/js"]
 
-  :figwheel {:css-dirs ["resources/public/css"]}
+  :jvm-opts ["--add-modules" "java.xml.bind"]
+
+  :figwheel {}
 
   :profiles
   {:dev

@@ -1,7 +1,17 @@
 (ns drumms.core-test
   (:require [cljs.test :refer-macros [deftest testing is]]
-            [drumms.core :as core]))
+            [drumms.events :as events]))
 
-(deftest fake-test
-  (testing "fake description"
-    (is (= 1 2))))
+
+;Events tests
+(deftest events-play
+  (testing "play drumm event"
+    (let [db (-> {}
+                 (events/initialize-db [:initialise-db]))
+          sound :snare
+          event [::events/play sound]
+          result (events/play db event)]
+
+      (is (=
+            result
+            {::play-sound :snare})))))
