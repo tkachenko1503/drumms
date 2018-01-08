@@ -9,3 +9,5 @@ out
 
 .lein-failures
 doo-index.html
+
+/node_modules
